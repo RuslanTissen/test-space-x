@@ -7,6 +7,7 @@ header {
 	display: flex;
 	align-items: center;
 	padding: 0 1rem;
+	border: 0.05px rgb(92, 91, 91) solid;
 	.header__cont {
 		width: 100vw;
 		height: inherit;
@@ -21,7 +22,7 @@ header {
 			width: 250px;
 			list-style: none;
 			margin: 0 auto;
-			border: 0.05px rgb(92, 91, 91) ridge;
+			border: 1px rgb(92, 91, 91) solid;
 			background:
 				linear-gradient(to right, rgb(181, 180, 180) 1px, transparent 2px) 0 0,
 				linear-gradient(to right, rgb(181, 180, 180) 1px, transparent 2px) 0 100%,
@@ -32,7 +33,7 @@ header {
 				linear-gradient(to top, rgb(181, 180, 180) 1px, transparent 2px) 0 100%,
 				linear-gradient(to top, rgb(181, 180, 180) 1px, transparent 2px) 100% 100%;
 			background-repeat: no-repeat;
-			background-size: 10px 10px;
+			background-size: 8px 8px;
 			.insd-logo {
 				width: 100%;
 				height: 100%;
@@ -72,12 +73,17 @@ header {
 		.header__cont {
 			max-width: 1170px;
 			justify-content: space-between;
-			// margin-block: auto;
 			.header__cont--logo {
 				margin: 0;
 			}
 			.li-mob-pc {
 				display: block;
+				transition: all 0.3s ease-in-out;
+				padding: .4rem 0;
+				border-bottom: .05px solid transparent;
+			}
+			.li-mob-pc:hover{
+				border-bottom: .05px outset white;
 			}
 		}
 		.header__hamb {
