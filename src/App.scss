@@ -1,0 +1,11 @@
+.App {
+	height: 100vh;
+	background-image: url("./images/Untitled\ \(17.63\ x\ 6.66\ cm\).png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@media (min-width: 1060px) {
+		background-image: url("./images/bgr_with_title.png");
+		padding-block: 10rem;
+	}
+}
