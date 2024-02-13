@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Block.scss"
 
 function Block(props) {
 	let { info_1, info_2, info_3, info_2_1 } = props
