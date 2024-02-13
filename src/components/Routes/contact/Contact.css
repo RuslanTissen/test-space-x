@@ -1,0 +1,15 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact h2 {
+  color: darkblue;
+  font-size: clamp(3rem, 15vw, 5rem);
+}/*# sourceMappingURL=Contact.css.map */

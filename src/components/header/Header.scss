@@ -46,6 +46,10 @@ header {
 		.li-mob-pc {
 			list-style: none;
 			display: none;
+			a{
+				text-decoration: none;
+				color: white;
+			}
 		}
 	}
 	.header__hamb {
@@ -65,6 +69,10 @@ header {
 		.li-drpdwn {
 			border-bottom: 0.01px solid rgb(83, 82, 82);
 			padding: 0.5rem;
+			a{
+				text-decoration: none;
+				color: white;
+			}
 		}
 	}
 	@media (min-width: 1060px) {

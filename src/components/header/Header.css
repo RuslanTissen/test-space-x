@@ -41,6 +41,10 @@ header .header__cont .li-mob-pc {
   list-style: none;
   display: none;
 }
+header .header__cont .li-mob-pc a {
+  text-decoration: none;
+  color: white;
+}
 header .header__hamb {
   color: white;
   font-size: 1.5rem;
@@ -59,6 +63,10 @@ header .header__drdwn {
 header .header__drdwn .li-drpdwn {
   border-bottom: 0.01px solid rgb(83, 82, 82);
   padding: 0.5rem;
+}
+header .header__drdwn .li-drpdwn a {
+  text-decoration: none;
+  color: white;
 }
 @media (min-width: 1060px) {
   header {

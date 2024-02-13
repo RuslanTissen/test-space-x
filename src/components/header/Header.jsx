@@ -1,7 +1,8 @@
 import React from 'react'
 import "./Header.scss"
-import { useState,useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
 	const [show, setShow] = useState(false)
@@ -23,30 +24,33 @@ function Header() {
 		document.addEventListener("mousedown", handler)
 	})
 
+	const scrollToTheTop = () => {
+		window.scroll(0, 0)
+	}
+
 	return (
-		<header id='header'>
+		<header id='header'  ref={menuRef}>
 			<ul className='header__cont'>
-				<li className='header__cont--logo'><div className='insd-logo
-				'></div></li>
-				<li className='li-mob-pc'>Главная</li>
-				<li className='li-mob-pc'>Технология</li>
-				<li className='li-mob-pc'>График полётов</li>
-				<li className='li-mob-pc'>Гарантии</li>
-				<li className='li-mob-pc'>О компании</li>
-				<li className='li-mob-pc'>Контакты</li>
+				<li className='header__cont--logo'><NavLink to="*" onClick={scrollToTheTop}><div className='insd-logo'></div></NavLink></li>
+				<li className='li-mob-pc'><NavLink to="*" onClick={scrollToTheTop}>Главная</NavLink></li>
+				<li className='li-mob-pc'><NavLink to="Technology" onClick={scrollToTheTop}>Технология</NavLink></li>
+				<li className='li-mob-pc'><NavLink to="Flightplan" onClick={scrollToTheTop}>График полётов</NavLink></li>
+				<li className='li-mob-pc'><NavLink to="Guarantees" onClick={scrollToTheTop}>Гарантии</NavLink></li>
+				<li className='li-mob-pc'><NavLink to="About" onClick={scrollToTheTop}>О компании</NavLink></li>
+				<li className='li-mob-pc'><NavLink to="Contacts" onClick={scrollToTheTop}>Контакты</NavLink></li>
 			</ul>
 
-			<div className='header__hamb' ref={menuRef} onClick={() => myFunction()} >
+			<div className='header__hamb' onClick={() => myFunction()}>
 				{active ? <RxHamburgerMenu /> : < RxCross1 />}
 			</div>
 
-			{show && <ul className='header__drdwn'>
-				<li className='li-drpdwn'>Главная</li>
-				<li className='li-drpdwn'>Технология</li>
-				<li className='li-drpdwn'>График полётов</li>
-				<li className='li-drpdwn'>Гарантии</li>
-				<li className='li-drpdwn'>О компании</li>
-				<li className='li-drpdwn'>Контакты</li>
+			{show && <ul className='header__drdwn'  >
+				<li className='li-drpdwn'><NavLink to="*" onClick={scrollToTheTop}>Главная</NavLink></li>
+				<li className='li-drpdwn'><NavLink to="Technology" onClick={scrollToTheTop}>Технология</NavLink></li>
+				<li className='li-drpdwn'><NavLink to="Flightplan" onClick={scrollToTheTop}>График полётов</NavLink></li>
+				<li className='li-drpdwn'><NavLink to="Guarantees" onClick={scrollToTheTop}>Гарантии</NavLink></li>
+				<li className='li-drpdwn'><NavLink to="About" onClick={scrollToTheTop}>О компании</NavLink></li>
+				<li className='li-drpdwn'><NavLink to="Contacts" onClick={scrollToTheTop}>Контакты</NavLink></li>
 			</ul>}
 
 		</header>

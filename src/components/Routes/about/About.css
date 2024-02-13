@@ -1,0 +1,15 @@
+.about {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/about.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about h2 {
+  color: darkblue;
+  font-size: clamp(3rem, 15vw, 5rem);
+}/*# sourceMappingURL=About.css.map */
